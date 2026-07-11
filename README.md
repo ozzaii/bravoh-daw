@@ -111,7 +111,7 @@ Issues and PRs welcome — especially:
 - Field coverage improvements for FL Studio and Logic Pro
 - Support for more DAWs (Cubase `.cpr`, Studio One `.song`, Bitwig `.bwproject`)
 
-Run the gates before pushing:
+Run the gates before pushing — `./gates.sh` (macOS/Linux) or `.\gates.ps1` (Windows), which wrap:
 
 ```bash
 cargo test && cargo clippy --all-targets -- -D warnings && cargo fmt --check
