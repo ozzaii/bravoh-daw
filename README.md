@@ -1,7 +1,7 @@
 # bravoh-daw
 
-[![CI](https://github.com/ozzaii/bravoh-daw/actions/workflows/ci.yml/badge.svg)](https://github.com/ozzaii/bravoh-daw/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Rust 1.87+](https://img.shields.io/badge/rust-1.87%2B-orange.svg)](https://www.rust-lang.org)
 
 **Parse DAW project files in pure Rust — no DAW installation required.**
 
