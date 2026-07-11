@@ -1,11 +1,11 @@
 [package]
-name = "bravo-daw"
+name = "bravoh-daw"
 version = "0.1.0"
 edition = "2021"
 rust-version = "1.87"
 license = "MIT"
 description = "Parse Ableton Live, FL Studio, Logic Pro & REAPER project files into one unified schema"
-repository = "https://github.com/ozzaii/bravo-daw"
+repository = "https://github.com/bravoh-ai/bravoh-daw"
 readme = "README.md"
 keywords = ["daw", "ableton", "fl-studio", "reaper", "audio"]
 categories = ["parser-implementations", "multimedia::audio"]
@@ -22,5 +22,5 @@ tracing = "0.1"
 tempfile = "3"
 
 [[bin]]
-name = "bravo-daw"
+name = "bravoh-daw"
 path = "src/main.rs"

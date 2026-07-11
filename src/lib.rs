@@ -1,4 +1,4 @@
-//! # bravo-daw
+//! # bravoh-daw
 //!
 //! Parse DAW project files in pure Rust — no DAW installation required.
 //!
@@ -12,7 +12,7 @@
 //! downstream code never needs to care which DAW a project came from.
 //!
 //! ```no_run
-//! let intel = bravo_daw::parse("my_track.als").unwrap();
+//! let intel = bravoh_daw::parse("my_track.als").unwrap();
 //! println!("{} @ {:?} BPM, {} tracks", intel.daw, intel.bpm, intel.tracks.len());
 //! ```
 //!
@@ -28,7 +28,7 @@ pub mod reaper;
 use serde::{Deserialize, Serialize};
 use std::path::{Path, PathBuf};
 
-/// The DAWs bravo-daw can parse.
+/// The DAWs bravoh-daw can parse.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
 pub enum Daw {
     AbletonLive,

@@ -1,12 +1,12 @@
-//! bravo-daw CLI: parse DAW project files and print the result as JSON.
+//! bravoh-daw CLI: parse DAW project files and print the result as JSON.
 
 use std::process::ExitCode;
 
 const USAGE: &str = "\
-bravo-daw — parse DAW project files into unified JSON
+bravoh-daw — parse DAW project files into unified JSON
 
 USAGE:
-    bravo-daw <PROJECT_FILE>...
+    bravoh-daw <PROJECT_FILE>...
 
 Supported formats: .als (Ableton Live), .flp (FL Studio),
                    .logicx (Logic Pro), .rpp (REAPER)";
@@ -24,7 +24,7 @@ fn main() -> ExitCode {
 
     let mut failed = false;
     for arg in &args {
-        match bravo_daw::parse(arg) {
+        match bravoh_daw::parse(arg) {
             Ok(intel) => match serde_json::to_string_pretty(&intel) {
                 Ok(json) => println!("{json}"),
                 Err(e) => {

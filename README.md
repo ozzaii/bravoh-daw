@@ -1,6 +1,6 @@
-# bravo-daw
+# bravoh-daw
 
-[![CI](https://github.com/ozzaii/bravo-daw/actions/workflows/ci.yml/badge.svg)](https://github.com/ozzaii/bravo-daw/actions/workflows/ci.yml)
+[![CI](https://github.com/bravoh-ai/bravoh-daw/actions/workflows/ci.yml/badge.svg)](https://github.com/bravoh-ai/bravoh-daw/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **Parse DAW project files in pure Rust — no DAW installation required.**
@@ -18,7 +18,7 @@ Every parser returns the same `ParsedIntelligence` struct, so downstream code ne
 
 ## Why
 
-Project files are where the real story of a track lives — tempo, arrangement, plugin chains, sample choices, routing. But each DAW buries that story in a different proprietary format, and the existing tooling is scattered across single-format libraries in different languages. `bravo-daw` gives you all four majors behind one function call, fast enough to run on every file-save event.
+Project files are where the real story of a track lives — tempo, arrangement, plugin chains, sample choices, routing. But each DAW buries that story in a different proprietary format, and the existing tooling is scattered across single-format libraries in different languages. `bravoh-daw` gives you all four majors behind one function call, fast enough to run on every file-save event.
 
 Extracted from [BRAVOH](https://altidus.world) Studio, where these parsers run in production on real artists' projects every day.
 
@@ -27,8 +27,8 @@ Extracted from [BRAVOH](https://altidus.world) Studio, where these parsers run i
 ### CLI
 
 ```bash
-cargo install --git https://github.com/ozzaii/bravo-daw
-bravo-daw my_track.als
+cargo install --git https://github.com/bravoh-ai/bravoh-daw
+bravoh-daw my_track.als
 ```
 
 ```json
@@ -60,17 +60,17 @@ bravo-daw my_track.als
 
 ```toml
 [dependencies]
-bravo-daw = { git = "https://github.com/ozzaii/bravo-daw" }
+bravoh-daw = { git = "https://github.com/bravoh-ai/bravoh-daw" }
 ```
 
 ```rust
 // Auto-detect the format from the extension
-let intel = bravo_daw::parse("my_track.als")?;
+let intel = bravoh_daw::parse("my_track.als")?;
 println!("{} @ {:?} BPM, {} tracks", intel.daw, intel.bpm, intel.tracks.len());
 
 // Or parse as a specific format
-use bravo_daw::Daw;
-let intel = bravo_daw::parse_as("weird_name.backup", Daw::AbletonLive)?;
+use bravoh_daw::Daw;
+let intel = bravoh_daw::parse_as("weird_name.backup", Daw::AbletonLive)?;
 ```
 
 ## What gets extracted
@@ -123,4 +123,4 @@ cargo test && cargo clippy --all-targets -- -D warnings && cargo fmt --check
 
 ---
 
-*Part of **Bravo**, the open-source initiative from the team building BRAVOH — the AI operating system for music artists.*
+*Part of **BRAVOH open source**, the OSS initiative from the team building BRAVOH — the AI operating system for music artists.*
