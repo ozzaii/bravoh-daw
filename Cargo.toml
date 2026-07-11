@@ -1,0 +1,26 @@
+[package]
+name = "bravo-daw"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.87"
+license = "MIT"
+description = "Parse Ableton Live, FL Studio, Logic Pro & REAPER project files into one unified schema"
+repository = "https://github.com/ozzaii/bravo-daw"
+readme = "README.md"
+keywords = ["daw", "ableton", "fl-studio", "reaper", "audio"]
+categories = ["parser-implementations", "multimedia::audio"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+quick-xml = "0.37"
+flate2 = "1"
+regex = "1"
+tracing = "0.1"
+
+[dev-dependencies]
+tempfile = "3"
+
+[[bin]]
+name = "bravo-daw"
+path = "src/main.rs"
