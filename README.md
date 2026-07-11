@@ -1,6 +1,6 @@
 # bravoh-daw
 
-[![CI](https://github.com/bravoh-ai/bravoh-daw/actions/workflows/ci.yml/badge.svg)](https://github.com/bravoh-ai/bravoh-daw/actions/workflows/ci.yml)
+[![CI](https://github.com/ozzaii/bravoh-daw/actions/workflows/ci.yml/badge.svg)](https://github.com/ozzaii/bravoh-daw/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **Parse DAW project files in pure Rust — no DAW installation required.**
@@ -27,7 +27,7 @@ Extracted from [BRAVOH](https://altidus.world) Studio, where these parsers run i
 ### CLI
 
 ```bash
-cargo install --git https://github.com/bravoh-ai/bravoh-daw
+cargo install --git https://github.com/ozzaii/bravoh-daw
 bravoh-daw my_track.als
 ```
 
@@ -60,7 +60,7 @@ bravoh-daw my_track.als
 
 ```toml
 [dependencies]
-bravoh-daw = { git = "https://github.com/bravoh-ai/bravoh-daw" }
+bravoh-daw = { git = "https://github.com/ozzaii/bravoh-daw" }
 ```
 
 ```rust
